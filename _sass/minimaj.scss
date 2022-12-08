@@ -1,0 +1,131 @@
+* { 
+    box-sizing: border-box; 
+}
+
+body { 
+    font-family: 'Inconsolata', monospace; 
+    line-height: 1.15; 
+    background-color: #181818;
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+h1 {
+    font-size: 1.6em;
+}
+
+h1, h2, h3, h4, h5, h6, th { 
+    font-family: 'Source Code Pro', monospace; 
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: darkorange;
+}
+
+pre, code {
+    font-family: 'Ubuntu Mono', monospace;
+    border: 1px solid lightslategrey;
+    border-radius: 5px;
+}
+
+code { 
+    padding: 1px 5px; 
+}
+
+pre { 
+    padding: 8px 12px; 
+    overflow-x: auto; 
+}
+
+pre > code { 
+    border: 0; padding-right: 0; padding-left: 0; 
+}
+
+table {
+    border-spacing: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 0.5px solid lightslategrey;
+    border-radius: 5px;
+}
+
+th, td {
+    border: 0.5px solid lightslategrey;
+    background-color: #111111;
+    padding: 2px 4px;
+}
+
+th {
+    background-color: black;
+    border-bottom: 1.5px solid lightslategrey;
+    color: honeydew;
+}
+
+/* the first 'th' within the first 'tr' of the 'thead': */
+thead tr:first-child th:first-child {
+    border-radius: 5px 0 0 0;
+}
+
+/* the last 'th' within the first 'tr' of the 'thead': */
+thead tr:first-child th:last-child {
+    border-radius: 0 5px 0 0;
+}
+
+/* the first 'td' within the last 'tr' of the 'tbody': */
+tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 5px;
+}
+
+/* the last 'td' within the last 'tr' of the 'tbody': */
+tbody tr:last-child td:last-child {
+    border-radius: 0 0 5px 0;
+}
+
+.w { 
+    max-width: 750px; 
+    margin: 0 auto; 
+}
+
+.date-full {
+    color: hotpink;
+}
+
+.posts {
+    border-collapse: inherit;
+    border-spacing: 0 10px;
+    border: 0px solid transparent;
+    background-color: inherit;
+
+    td, tr {
+        border: 0px solid transparent;
+        background-color: inherit;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.post-date { 
+    padding-right: 10px;
+    vertical-align: top;
+    color: lightcyan;
+}
+
+.post-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+}

@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<article itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header>
+    <div class="post-nav">
+      <a href="{{ "/" | relative_url }}"><h4>~/</h4></a>
+      {%- include contact.html -%}
+    </div>
+    <br>
+    <h1 itemprop="name headline">{{ page.title | escape }}</h1>
+    <time class="date-full" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%d %B %Y" }}</time>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <a href="{{ page.url | relative_url }}" hidden></a>
+</article>

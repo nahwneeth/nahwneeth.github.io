@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<header>
+  <div class="post-nav">
+    <a href="{{ "/" | relative_url }}"><h3>{{ site.title }}</h3></a>
+    {%- include contact.html -%}
+  </div>
+  {%- if site.description -%}
+    <h5 style="color: hotpink;">{{ site.description }}</h5>
+  {%- endif -%}
+</header>
+
+<div>
+  <table class="posts">
+    <tbody>
+      {%- for post in site.posts -%}
+      <tr>
+        <td class="post-date">{{ post.date | date: "%Y.%m.%d" }}</td>
+        <td>
+          <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </td>
+      </tr>
+      {%- endfor -%}
+    </tbody>
+  </table>
+
+</div>
